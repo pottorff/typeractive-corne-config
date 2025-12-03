@@ -163,6 +163,64 @@
         };
     };
 
+    macros {
+        parenth_macro: parenth_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "PARENTH_MACRO";
+        };
+
+        bracket_macro: bracket_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
+            label = "BRACKET_MACRO";
+        };
+
+        brace_macro: brace_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+            label = "BRACE_MACRO";
+        };
+
+        select_line_macro: select_line_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(END)>;
+            label = "SELECT_LINE_MACRO";
+        };
+
+        switch_window_rc: switch_window_rc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp S &kp W>;
+            label = "SWITCH_WINDOW_RC";
+        };
+
+        clear: clear {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp L &kp E &kp A &kp R>;
+            label = "CLEAR";
+        };
+
+        git_status: git_status {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp I &kp T &kp SPACE &kp S &kp T &kp A &kp T &kp U &kp S>;
+            label = "GIT_STATUS";
+        };
+
+        git_commit: git_commit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp A &kp M &kp SPACE &kp DQT &kp DOUBLE_QUOTES &kp LEFT_ARROW>;
+            label = "GIT_COMMIT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
